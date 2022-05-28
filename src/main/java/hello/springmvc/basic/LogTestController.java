@@ -13,7 +13,7 @@ public class LogTestController {
     public String logTest(){
         String name = "spring";
 
-        log.info("info log={]", name);
+        log.info("info log={}", name);
 
         return "ok";
     }
