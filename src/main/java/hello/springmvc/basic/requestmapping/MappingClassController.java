@@ -17,7 +17,7 @@ public class MappingClassController {
         return "get users";
     }
 
-    @PostMapping("/mapping/user")
+    @PostMapping("/mapping/users")
     public String addUser() {
         return "post user";
     }
