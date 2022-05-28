@@ -13,6 +13,7 @@ public class LogTestController {
     public String logTest(){
         String name = "spring";
 
+        // 로그레벨 순서 ->
         log.trace("trace log={}", name);
         log.debug("debug log={}", name);
         log.info("info log={}", name);
