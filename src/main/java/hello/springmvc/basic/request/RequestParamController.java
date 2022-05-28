@@ -28,9 +28,7 @@ public class RequestParamController {
     @RequestMapping("/request-param-v2")
     public String requestParamV2(@RequestParam("username") String memberName,
                                  @RequestParam("age") int memberAge) {
-
         log.info("memberName={}, memberAge={}", memberName, memberAge);
-
         return "ok";
     }
 
@@ -38,15 +36,22 @@ public class RequestParamController {
     @RequestMapping("/request-param-v3")
     public String requestParamV3(@RequestParam String username,
                                  @RequestParam int age) {
-
         log.info("userName={}, age={}", username, age);
-
         return "ok";
     }
 
     @ResponseBody
     @RequestMapping("/request-param-v4")
     public String requestParamV4(String username, int age) {
+        log.info("username={}, age={}", username, age);
+        return "ok";
+    }
+
+    @ResponseBody
+    @RequestMapping("/request-param-required")
+    public String requestParamRequired(
+            @RequestParam(required = true) String username,
+            @RequestParam(required = false) Integer age) {
 
         log.info("username={}, age={}", username, age);
 
