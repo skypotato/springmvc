@@ -62,7 +62,7 @@ public class RequestParamController {
     @RequestMapping("/request-param-default")
     public String requestParamDefault(
             @RequestParam(required = true, defaultValue = "guest") String username,
-            @RequestParam(required = false) Integer age) {
+            @RequestParam(required = false, defaultValue = -1) int age) {
 
         log.info("username={}, age={}", username, age);
 
