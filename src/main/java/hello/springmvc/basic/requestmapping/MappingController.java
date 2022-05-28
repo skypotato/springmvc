@@ -30,7 +30,7 @@ public class MappingController {
     }
 
     /**
-     * PathVariable 사용 다중
+     * PathVariable(경로 변수) 사용 다중
      * 변수명이 같으면 생량 가능
      *
      * @PathVariable("userId") String userId -> @PathVariable userId
