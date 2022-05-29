@@ -89,6 +89,7 @@ public class RequestParamController {
         helloData.setAge(age);
 
         log.info("username={}, age={}", helloData.getUsername(), helloData.getAge());
+        log.info("helloData={}", helloData);
 
         return "ok";
     }
