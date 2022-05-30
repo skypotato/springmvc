@@ -8,12 +8,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Slf4j
-@Controller
+//@Controller
+//@ResponseBody
+@RestController
 public class ResponseBodyController {
 
     @GetMapping("/response-body-string-v1")
@@ -26,7 +29,7 @@ public class ResponseBodyController {
         return new ResponseEntity<String>("ok", HttpStatus.OK);
     }
 
-    @ResponseBody
+//    @ResponseBody
     @GetMapping("/response-body-string-v3")
     public String responseBodyV3() {
         return "ok";
@@ -43,7 +46,7 @@ public class ResponseBodyController {
 
 
     @ResponseStatus(HttpStatus.OK)
-    @ResponseBody
+//    @ResponseBody
     @GetMapping("/response-body-json-v2")
     public HelloData responseBodyJSONV2() {
         HelloData helloData = new HelloData();
